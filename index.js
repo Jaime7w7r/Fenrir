@@ -1,44 +1,5 @@
-function main(){
-    document.getElementById("main").innerHTML="<h1>Toma al lobo y arrastralo al cuadro verde</h1><h1>para desbloquear la diversión</h1><div style='position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)'><section id='unlock'><img id='candado' src='media/wolf.png'></section><section id='lock'><canvas id='lienzo' width='100' height='100'></canvas></section></div>";
-    document.getElementById("candado").addEventListener("dragstart", arrastre, false);
-    document.getElementById("candado").addEventListener("dragend", fin, false);
-    soltar=document.getElementById("lienzo");
-    lienzo=soltar.getContext("2d");
-    soltar.addEventListener("dragenter", EvE, false);
-    soltar.addEventListener("dragover", EvO, false);
-    soltar.addEventListener("drop", EvD, false);
-}
-
-function EvE(e) {
-    e.preventDefault();
-}
-
-function EvO(e) {
-    e.preventDefault();
-}
-
-function fin(e){
-    elemento=e.target;
-}
-
-function arrastre(e) {
-    elemento = e.target;
-    e.dataTransfer.setData("Text", elemento.getAttribute("id"));
-    e.dataTransfer.setDragImage(e.target, 50, 50);
-}
-
-function EvD(e) {
-    e.preventDefault();
-    var id = e.dataTransfer.getData("Text");
-    var elemento = document.getElementById(id);
-    var posx = e.pageX - soltar.offsetLeft;
-    var posy = e.pageY - soltar.offsetTop;
-    lienzo.drawImage(elemento, posx, posy);
-
-    var audio = new Audio('media/musica.mp3');
-    audio.play();
-
-    document.getElementById("main").innerHTML = "<div id='pag2'><div class='container'><h1 class='title animated bounceInLeft'>Bienvenidos al Juego de Aventuras</h1><p class='subtitle animated slideInRight'>Este juego es para niños y está lleno de aventuras y desafíos.</p><button id='startBtn' class='btn btn-primary' onclick='window.open('pag2.html', '_blank')'>Comenzar Juego</button><div class='canvas-container'><canvas id='gameCanvas'></canvas></div><img src='media/uaa.png' alt='logo' class='logo' width='10%'></div>";
+function main() {
+    document.getElementById("main").innerHTML = "<div id='pag2'><div class='container'><div><h1 style='float: left;'>Fenrir</h1><img src='media/ico.ico'></div><h1 class='title animated bounceInLeft'>Bienvenidos al Juego de Aventuras</h1><p class='subtitle animated slideInRight'>Este juego es para niños y está lleno de aventuras y desafíos.</p><button id='button1' class='btn btn-primary' onclick='cap()'>Capturar alias</button><div class='canvas-container'><canvas id='gameCanvas'></canvas></div><img src='media/uaa.png' alt='logo' class='logo' width='10%'></div>";
     var canvas = document.getElementById("gameCanvas");
     var ctx = canvas.getContext("2d");
     canvas.width = window.innerWidth;
@@ -51,7 +12,8 @@ function EvD(e) {
     logo.classList.add("animated", "bounceInRight");
 
     var img = new Image();
-    img.onload = function() {
+    img.src = "media/superman.png";
+    img.onload = function () {
         var hRatio = canvas.width / img.width;
         var vRatio = canvas.height / img.height;
         var ratio = Math.min(hRatio, vRatio);
@@ -61,8 +23,43 @@ function EvD(e) {
         ctx.drawImage(img, 0, 0, img.width, img.height,
             centerShift_x, centerShift_y, img.width * ratio, img.height * ratio);
     };
-    img.src = "media/superman.png";
 }
 
+function cap() {
+    document.getElementById("main").innerHTML = "<div class='ejemplo'><br><label for='nombre'> Alias: </label><input type='text' id='nombre' /><input type='button' id='boton' onclick='verificar()' value='Verificar datos' /><p id='datos'> Pulsa para ver tu nombre y tu password. </p></div>"
+}
 
-window.onload=main;
+function alta(i) {
+    var carr = JSON.stringify(
+        {
+            descripcion: Name[i],
+            precio: Precio[i]
+        });
+    carrito.push(carr);
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    lista();
+}
+
+function Eliminar(i) {
+    document.getElementById("liveAlertPlaceholder").innerHTML = " ";
+    var carr = JSON.parse(carrito[i]);
+    var descripcion = carr.descripcion;
+    carrito.splice(i, 1);
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    lista();
+    var alertPlaceholder = document.getElementById('liveAlertPlaceholder');
+    var wrapper = document.createElement('div');
+    wrapper.innerHTML = '<div class="alert alert-succes alert-dismissible" role="alert">' + carr.descripcion + ' Eliminado<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+    alertPlaceholder.append(wrapper);
+}
+
+function verificar() {
+    if (localStorage.nombre != undefined) {
+        document.getElementById("datos").innerHTML = "Nombre: " + localStorage.nombre;
+    }
+    else {
+        document.getElementById("datos").innerHTML = "No has introducido tu nombre y tu password";
+    }
+}
+
+window.onload = main;

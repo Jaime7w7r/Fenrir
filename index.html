@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +12,27 @@
     <script type="text/javascript" src="index.js"></script>
     <title>Fenrir</title>
 </head>
+
 <body>
-    <div id="main"></div>
+    <audio id="miAudio" src="media/musica.mp3"></audio>
+
+    <button id="miAudiob" onclick="togglePlay()" style="background-image: url('media/music.png'); background-repeat: no-repeat; background-size: 50px; border: 'none'; width: 50px; height: 50px;"></button>
+    <script>
+        const boton=document.getElementById("miAudiob");
+        const miAudio = document.getElementById("miAudio"); function togglePlay() {
+            if (miAudio.paused) {
+                miAudio.play(); var elemento = document.getElementById("miAudio");
+                boton.style.background = "url('media/mute.png')";
+                boton.style.border = "none";
+            } else {
+                miAudio.pause(); var
+                elemento = document.getElementById("miAudio");
+                boton.style.backgroundImage = "url('media/music.png')";
+            }
+        }
+    </script>
+
+        <div id="main"></div>
 </body>
+
 </html>
