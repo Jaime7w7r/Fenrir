@@ -96,6 +96,11 @@ body {
   z-index: -1;
 }
 
+.ejemploc{
+  margin-top: 10%;
+  margin-left: 32%;
+}
+
 .ejemplo {
   margin-left: 38%;
   width: 24%;

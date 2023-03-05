@@ -31,7 +31,7 @@ function main() {
 function cap() {
     const audio = new Audio('media/ok.mp3');
     audio.play();
-    document.getElementById("main").innerHTML = "<input type='button' class='ko' id='boton1' onclick='main()' value='Volver al menu' /><div class='ejemplo'><br><label for='nombre'> Alias: </label><input type='text' id='nombre' /><input type='button' id='boton' onclick='verificar()' value='Verificar datos' /><p id='datos'> Pulsa para ver tus datos. </p></div>"
+    document.getElementById("main").innerHTML = "<input type='button' class='ko' id='boton1' onclick='main()' value='Volver al menu' /><div class='ejemploc'><br><label for='nombre'> Alias: </label><input type='text' id='nombre' /><input type='button' id='boton' onclick='verificar()' value='Verificar datos' /><p id='datos'> Pulsa para ver tus datos. </p></div>"
 }
 
 function cre(){
@@ -41,14 +41,14 @@ function cre(){
 }
 
 function verificar() {
-    
     if (localStorage.nombre != undefined) {
         document.getElementById("datos").innerHTML = "Alias: " + localStorage.alias+"Puntuación: "+localStorage.puntuacion+"Tiempo: "+localStorage.tiempo;
     }
     else {
         document.getElementById("datos").innerHTML = "No se encuentran datos";
     }
-    document.getElementById("main").innerHTML += "<input type='button' style='margin-left: 45%;' id='boton' onclick='El juego xd' value='Empezar el juego' />";
+    document.getElementById("main").innerHTML += "<input type='button' style='margin-left: 45%;' id='boton' class='EJ' onclick='El juego xd' value='Empezar el juego' />";
+    
 }
 
 
