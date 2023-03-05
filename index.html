@@ -14,11 +14,11 @@
 </head>
 
 <body>
-    <audio id="miAudio" src="media/musica.mp3"></audio>
-
-    <button id="miAudiob" onclick="togglePlay()" style="float: left; background-image: url('media/music.png'); background-repeat: no-repeat; background-size: 50px; border: 'none'; width: 50px; height: 50px;"></button>
+    <img src='media/vaca2.gif'class='vaca' width='20%'>
+    <button id="miAudiob" onclick="togglePlay()"
+        style="float: left; background-image: url('media/music.png'); background-repeat: no-repeat; background-size: 50px; border: 'none'; width: 50px; height: 50px;"></button>
     <script>
-        const boton=document.getElementById("miAudiob");
+        const boton = document.getElementById("miAudiob");
         const miAudio = document.getElementById("miAudio"); function togglePlay() {
             if (miAudio.paused) {
                 miAudio.play(); var elemento = document.getElementById("miAudio");
@@ -26,13 +26,13 @@
                 boton.style.border = "none";
             } else {
                 miAudio.pause(); var
-                elemento = document.getElementById("miAudio");
+                    elemento = document.getElementById("miAudio");
                 boton.style.backgroundImage = "url('media/music.png')";
             }
         }
     </script>
 
-        <div id="main"></div>
+    <div id="main"></div>
 </body>
 
 </html>

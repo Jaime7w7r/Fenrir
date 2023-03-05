@@ -7,10 +7,15 @@ h1 {
   color: #000000;
 }
 
+html {
+  height: 100%;
+}
+
 body {
-  background-image: url(media/BG.png);
-  background-size: cover;
+  background: rgb(30, 115, 98);
+  background: linear-gradient(0deg, rgba(30, 115, 98, 1) 0%, rgba(43, 160, 129, 1) 37%, rgba(44, 180, 143, 1) 58%, rgba(63, 254, 195, 1) 100%);
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #pag2 {
@@ -57,6 +62,13 @@ body {
   right: 20px;
 }
 
+.vaca {
+  position: absolute;
+  bottom: 20px;
+  right: 40%;
+}
+
+
 #button1 {
   padding: 15px 30px;
   background-color: rgb(86, 197, 197);
@@ -85,8 +97,8 @@ body {
 }
 
 .ejemplo {
-  margin-left: 40%;
-  width: 20%;
+  margin-left: 38%;
+  width: 24%;
 }
 
 .ejemplo input {
@@ -108,11 +120,19 @@ label,
 }
 
 label {
+  text-align: justify;
   font-size: 1.5rem;
   font-weight: bold;
   padding: 0.35rem 0.5rem;
   -webkit-box-shadow: inset 34px -8px 0px -16px #56C5C5;
   -moz-box-shadow: inset 34px -8px 0px -16px #56C5C5;
+}
+
+#boton1 {
+  font-size: 1.2rem;
+  margin-left: 2%;
+  background-color: #127369;
+  color: white;
 }
 
 #boton {
