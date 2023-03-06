@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="media/Images/ico.ico">
+    <title>Fenrir Juego de Animales</title>
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+<body>
+    <audio id="ArdillaSound">   
+        <source src="Media/Sounds/Ardilla.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="Acierto">
+        <source src="Media/Sounds/Acc.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="ErrorSound">
+        <source src="Media/Sounds/Error.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="BuhoSound">
+        <source src="Media/Sounds/Buho.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="CiervoSound">
+        <source src="Media/Sounds/Ciervo.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="LoboSound">
+        <source src="Media/Sounds/Lobo.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="OsoSound">
+        <source src="Media/Sounds/Oso.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="PajaroCarpinteroSound">
+        <source src="Media/Sounds/Pajaro.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="VenadoSound">
+        <source src="Media/Sounds/Ciervo.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="ZorroSound">
+        <source src="Media/Sounds/Zorro.mp3" type="audio/mpeg">
+    </audio>
+
+
+
+
+
+
+
+    <section id="AnimalLabels">
+
+    </section>
+    <img id="btnRegresar" onclick="Regresar()" src="media/Images/Regresar.png">
+    <img id="Fondo" src="media/Images/Fondo.png">
+
+    <audio id="miAudio" src="media/Sounds/musica.mp3"></audio>
+
+    <button id="miAudiob" onclick="togglePlay()" src="media/Images/music.png"
+        style="float: left; background-image: url('media/Images/music.png'); background-repeat: no-repeat; background-size: 50px; border: 'none'; width: 50px; height: 50px;"></button>
+    <script>
+        const boton = document.getElementById("miAudiob");
+        const miAudio = document.getElementById("miAudio"); 
+        
+        function togglePlay() {
+            if (miAudio.paused) {
+                miAudio.play(); var elemento = document.getElementById("miAudio");
+                boton.style.background = "url('media/Images/mute.png')";
+                boton.style.border = "none";
+            } else {
+                miAudio.pause(); var
+                    elemento = document.getElementById("miAudio");
+                boton.style.backgroundImage = "url('media/Images/music.png')";
+            }
+        }
+    </script>
+    <section id="AnimalContainer">
+
+    </section>
+    
+    <div id="Crono" class="cronometro">00:00:00</div>
+    
+    <div id="Puntuacion" class="marcador">0</div>
+
+    <script src="functions.js"></script>
+
+</body>
+</html>

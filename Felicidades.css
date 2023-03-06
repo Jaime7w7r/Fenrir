@@ -1,0 +1,103 @@
+html{
+    height: 100%;
+}
+
+body {
+    background: rgb(30, 115, 98);
+    background: linear-gradient(0deg, rgba(30, 115, 98, 1) 0%, rgba(43, 160, 129, 1) 37%, rgba(44, 180, 143, 1) 58%, rgba(63, 254, 195, 1) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 4rem;
+    margin-top: 10%;
+    text-shadow: 4px 4px #000000;
+}
+
+p,
+.Datos {
+    color: #ffffff;
+    font-size: 2rem;
+    text-align: center;
+    text-shadow: 2px 2px #000000;
+}
+
+button {
+    background-color: #ffffff;
+    border: 2px solid black;
+    color: rgb(34, 139, 34);
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 5%;
+    display: block;
+    margin: 0px auto;
+    cursor: pointer;
+    box-shadow: 2px 2px #000000;
+}
+
+button:hover {
+    background-color: rgb(21, 87, 21);
+    ;
+    color: #ffffff;
+}
+
+.HuellasContainer {
+    justify-content: space-between;
+    width: 100%;
+    top: 0px;
+    margin-bottom: 110px;
+}
+
+.HuellasContainer>img {
+    margin-left: 90px;
+    width: 200px;
+}
+
+
+#Nombre {
+    background-color: rgb(43, 196, 43);
+    border-radius: 8px;
+    font-size: 30px;
+    border: none;
+    height: 60px;
+    text-align: center;
+}
+
+#Tiempo {
+    bottom: 600px;
+    left: 600px;
+}
+
+#Puntos {
+    bottom: 600px;
+    left: 1050px;
+}
+
+#captura{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+label {
+    color: white;
+        
+    text-align: justify;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0.35rem 0.5rem;
+  }
+
+  #Resultados{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+  }
+
+  .vaca {
+    position: absolute;
+    right: 43%;
+  }

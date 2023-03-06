@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fenrir Ingresa Tu Nombre</title>
+    <link rel="shortcut icon" href="media/Images/ico.ico">
+    <link href="Felicidades.css" rel="stylesheet">
+</head>
+
+<body>
+    <script>const audio = new Audio('media/Sounds/ok.mp3'); audio.play();</script>
+    <div id="captura">
+        <h1 class="Header">Registra tu nombre</h1>
+        <input type="text" id="Nombre" name="Nombre" required />
+        <button class="btnComenzar" onclick="Verificar()">Verificar</button>
+        <br>
+        <div id="datos"></div>  
+        <br>
+        <div id="btnj"></div>
+    </div>
+
+    <div class="HuellasContainer row">
+        <img src="Media/Images/Huellas/Ardilla.png" class="Ardilla" />
+        <img src="Media/Images/Huellas/Buho.png" class="Buho" />
+        <img src="Media/Images/Huellas/Ciervo.png" class="Ciervo" />
+        <img src="Media/Images/Huellas/Lobo.png" class="Lobo" />
+        <img src="Media/Images/Huellas/Oso.png" class="Oso" />
+        <img src="Media/Images/Huellas/Pajaro.png" class="Pajaro" />
+    </div>
+    <div class="HuellasContainer row" id="Huellas2">
+
+        <img src="Media/Images/Huellas/Oso.png" class="Oso" />
+        <img src="Media/Images/Huellas/Ardilla.png" class="Ardilla" />
+        <img src="Media/Images/Huellas/Lobo.png" class="Lobo" />
+        <img src="Media/Images/Huellas/Pajaro.png" class="Pajaro" />
+        <img src="Media/Images/Huellas/Buho.png" class="Buho" />
+        <img src="Media/Images/Huellas/Ciervo.png" class="Ciervo" />
+    </div>
+    <div class="HuellasContainer row" id="Huellas2">
+        <img src="Media/Images/Huellas/Ciervo.png" class="Ciervo" />
+        <img src="Media/Images/Huellas/Oso.png" class="Oso" />
+        <img src="Media/Images/Huellas/Ardilla.png" class="Ardilla" />
+        <img src="Media/Images/Huellas/Buho.png" class="Buho" />
+        <img src="Media/Images/Huellas/Lobo.png" class="Lobo" />
+        <img src="Media/Images/Huellas/Pajaro.png" class="Pajaro" />
+    </div>
+
+    <script src="verificar.js"></script>
+    <script src="Users.js"></script>
+</body>
+
+</html>
